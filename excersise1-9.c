@@ -29,21 +29,22 @@ int main()
 	while (i <= n) {
 		/* if space is found */
 		if (ip[i] == ' ') {
-			/* If there is only a single space*/
-			if( k == 1) {
-				/* copy the single space to the output string */
-				op[j] = ' ';
-				/* increment output buffer index */
-				j++;
-			}
 			/* count the number of spaces*/
 			k++;
-			if ( k > 1) {
+			/* if the number of spaces are more than one */
+			if (k > 1) {
+				/* skip the spaces in the input buffer */
 				i++;
 			}
 			continue;				
-		} else if ( k > 1) { /* If the number of spaces is more than one */		
-			op[j] = ip[i - 1];
+		} else if ( k > 1) { /* If the number of spaces is more than one */
+			/* replace the multiple space by a single space in the output buffer */
+			op[j] = ' ';
+			/*increment op buffer index */
+			j++;		
+			op[j] = ip[i];
+			/* reset space count 'k' */
+			k = 0;
 		} else {		
 			op[j] = ip[i];
 		}	      	
@@ -51,6 +52,6 @@ int main()
 		i++;
 		j++;
 	}
-	puts("The truncated string is \n");
+	puts("The truncated string is");
 	puts(op);	
 }
