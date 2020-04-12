@@ -1,0 +1,25 @@
+WARNING: Missing or malformed SPDX-License-Identifier tag in line 1
+#1: FILE: excersise1-9.c:1:
++/* Program to copy input to string to output and replace multiple spaces by a single space */
+
+WARNING: line over 80 characters
+#1: FILE: excersise1-9.c:1:
++/* Program to copy input to string to output and replace multiple spaces by a single space */
+
+WARNING: line over 80 characters
+#40: FILE: excersise1-9.c:40:
++		} else if (k > 1) { /* If the number of spaces is more than one */
+
+WARNING: line over 80 characters
+#41: FILE: excersise1-9.c:41:
++			/* replace the multiple space by a single space in the output buffer */
+
+total: 0 errors, 4 warnings, 57 lines checked
+
+NOTE: For some of the reported defects, checkpatch may be able to
+      mechanically convert to the typical style using --fix or --fix-inplace.
+
+excersise1-9.c has style problems, please review.
+
+NOTE: If any of the errors are false positives, please report
+      them to the maintainer, see CHECKPATCH in MAINTAINERS.

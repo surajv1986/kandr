@@ -6,7 +6,7 @@
 
 #define SIZE 100
 
-int main()
+int main(void)
 {
 	char ip[SIZE];
 	char op[SIZE], c;
@@ -36,22 +36,22 @@ int main()
 				/* skip the spaces in the input buffer */
 				i++;
 			}
-			continue;				
-		} else if ( k > 1) { /* If the number of spaces is more than one */
+			continue;
+		} else if (k > 1) { /* If the number of spaces is more than one */
 			/* replace the multiple space by a single space in the output buffer */
 			op[j] = ' ';
 			/*increment op buffer index */
-			j++;		
+			j++;
 			op[j] = ip[i];
-			/* reset space count 'k' */
+			/* reset the space count 'k' */
 			k = 0;
-		} else {		
+		} else {
 			op[j] = ip[i];
-		}	      	
+		}
 		/* Increment loop variables */
 		i++;
 		j++;
 	}
 	puts("The truncated string is");
-	puts(op);	
+	puts(op);
 }
