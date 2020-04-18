@@ -4,8 +4,8 @@
 
 #define SIZE 1000
 /* Function prototypes */
-int draw_histogram(int *count, int n);
-
+int draw_horizontal_histogram(int *count, int n);
+int draw_vertical_histogram(int *count, int n);
 
 int main(void)
 {
@@ -32,17 +32,17 @@ int main(void)
 		} else
 			count[j]++;
 		i++;
-
 	}
 	for (j = 0; j < k; j++) {
 		printf("%d\n", count[j]);
 	}
-	draw_histogram(count, k);
+	draw_horizontal_histogram(count, k);
+	draw_vertical_histogram(count, k);
 
 	return 0;
 }
 
-int draw_histogram(int *count, int n)
+int draw_horizontal_histogram(int *count, int n)
 {
 	int i = 0, j = 0;
 
@@ -62,4 +62,23 @@ int draw_histogram(int *count, int n)
 	}
 
 	return 0;
+}
+
+int draw_vertical_histogram(int *count, int n)
+{
+	int i = 0, j = 0;
+
+	puts("The required vertical histogram is ");
+	/* loop through the histogram array */
+	while (i < n) {
+		/* reset loop variable */
+		j = 0;
+		/* draw '*' until count */
+		while (j < *count) {
+			printf(" %s","*\n");
+			j++;
+		}
+		i++;
+		count++;
+	}
 }
